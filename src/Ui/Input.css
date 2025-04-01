@@ -1,0 +1,29 @@
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.input-label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  font-size: 14px;
+  color: #666; /* اللون بتاع النص زي ما كان */
+  background: transparent; /* نفس لون bg-white/70 */
+  backdrop-filter: blur(16px); /* نفس تأثير backdrop-blur-2xl */
+  padding: 0 4px; /* مسافة حوالين الـ label */
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+input:focus + .input-label,
+input:not(:placeholder-shown) + .input-label {
+  top: -10px;
+  font-size: 12px;
+  color: #333;
+  background: #d0d3d7; /* نفس اللون لما يطلع فوق */
+  /* backdrop-filter: blur(8px); نفس التأثير لما يطلع */
+  transform: translateY(0);
+}

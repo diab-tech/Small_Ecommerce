@@ -1,14 +1,15 @@
-import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
-import { ReactNode } from "react";
+import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
+import { ReactNode, useState } from "react";
 
 interface IProps {
   children: ReactNode;
   isOpen: boolean;
+  open: () => void;
   close: () => void;
-  title?: string;
+  title: string;
 }
 
-export default function MyModal({ close, isOpen, title, children }: IProps) {
+export default function MyModal({ children, close, open, isOpen, title }: IProps) {
   return (
     <>
       <Dialog
@@ -22,17 +23,12 @@ export default function MyModal({ close, isOpen, title, children }: IProps) {
           <div className="flex min-h-full items-center justify-center p-4">
             <DialogPanel
               transition
-              className="w-full max-w-md rounded-xl bg-white/5 p-6 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
+              className="w-full max-w-md rounded-xl bg-gray-300 p-6 duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
             >
-              {title && (
-                <DialogTitle
-                  as="h3"
-                  className="text-base/7 font-medium text-white"
-                >
-                  {title}
-                </DialogTitle>
-              )}
-              <div className="mt-4">{children}</div>
+              <DialogTitle className="text-base/7 font-bold text-indigo-500 mb-2 ">
+                {title}
+              </DialogTitle>
+              <div className="">{children}</div>
             </DialogPanel>
           </div>
         </div>

@@ -1,0 +1,138 @@
+.color-picker-container {
+  padding: 0px !important;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.MuiChip-root {
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Optional: subtle border for definition */
+}
+.picker-popover {
+  position: absolute;
+  z-index: 2;
+  right: 30px;
+  bottom: 70px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  width: 290px;
+  max-width: 90vw;
+}
+
+.picker-header {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  right: 10px;
+  /* right: 100%; */
+  margin-top: -5px;
+  margin-bottom: 5px;
+  margin-left: calc(100% - 18px);
+  width: 28px;
+  height: 28px;
+  border: 1px solid #eee;
+  transition: border 0.1s;
+  border-radius: 4px;
+}
+.picker-header:hover {
+  border-color: #000;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  padding: 0 5px;
+}
+
+.close-btn:hover {
+  color: #ff0000;
+}
+
+.picker-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid #e0e0e0; */
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Targeting the internal sketch-picker class */
+.sketch-picker {
+  padding: 0px !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+span.MuiChip-label {
+  padding: 5px !important;
+}
+
+/* Optional: Customize specific parts of SketchPicker */
+.sketch-picker input {
+  font-size: 14px !important; /* Adjust input font size */
+  padding: 5px !important; /* Adjust input padding */
+}
+
+.sketch-picker > div:nth-child(1) {
+  /* Targets the color square area */
+  margin-bottom: 10px !important;
+}
+
+.selected-colors {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 10px; */
+  /* margin-top: 20px; */
+  justify-content: center;
+}
+.rename-color label {
+  font-size: 13px;
+}
+.rename-color {
+  margin-bottom: 10px !important;
+}
+
+/* My Additions for the "X" Overlay */
+.chip-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.delete-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Circular shape */
+  cursor: pointer;
+  transition: all 0.2s ease; /* Smooth animation */
+}
+
+.delete-overlay:hover {
+  background-color: #ff0000; /* Red on hover */
+  transform: translate(-50%, -50%) scale(1.1); /* Slight scale-up */
+}
+
+@media (max-width: 600px) {
+  .picker-popover {
+    width: 200px;
+  }
+
+  .color-picker-container {
+    padding: 10px;
+  }
+}
