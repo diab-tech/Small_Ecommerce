@@ -1,0 +1,6 @@
+[build]
+command = "npm install && npm run build"
+publish = "dist" # أو المسار اللي فيه ملفات الإنتاج بتاعتك
+
+[build.environment]
+NODE_VERSION = "22.14.0"
