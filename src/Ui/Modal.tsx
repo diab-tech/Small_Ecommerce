@@ -1,5 +1,5 @@
-import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
-import { ReactNode, useState } from "react";
+import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
+import { ReactNode } from "react";
 
 interface IProps {
   children: ReactNode;
@@ -9,7 +9,7 @@ interface IProps {
   title: string;
 }
 
-export default function MyModal({ children, close, open, isOpen, title }: IProps) {
+export default function MyModal({ children, close, isOpen, title }: IProps) {
   return (
     <>
       <Dialog

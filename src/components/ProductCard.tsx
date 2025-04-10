@@ -1,4 +1,3 @@
-import Button from "../Ui/Button";
 import Image from "./Image";
 import { IProduct } from "../interfaces";
 import { txtSlicers } from "../utils/functions";

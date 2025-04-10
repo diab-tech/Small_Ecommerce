@@ -2,7 +2,7 @@ import { Button } from "@headlessui/react";
 import ProductCard from "./components/ProductCard";
 import { fakeProductList, FormInputData } from "./lib/fakeData";
 import MyModal from "./Ui/Modal";
-import { ChangeEvent, FormEvent, useMemo, useState } from "react";
+import { FormEvent, useMemo, useState } from "react";
 import Input from "./Ui/Input";
 import { IProduct } from "./interfaces";
 import productValidation from "./validation";
